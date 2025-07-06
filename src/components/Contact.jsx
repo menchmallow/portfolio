@@ -9,7 +9,12 @@ const Contact = () => {
         </span>
       </div>
       <div className="d-flex justify-content-center">
-        <a href="#" download target="_blank" className="btn btn-primary">
+        <a
+          href="/resume.pdf"
+          download
+          target="_blank"
+          className="btn btn-primary"
+        >
           download resume
         </a>
       </div>
