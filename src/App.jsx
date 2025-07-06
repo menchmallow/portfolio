@@ -7,7 +7,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 function App() {
-  const [title, setTitle] = useState("contact");
+  const [title, setTitle] = useState();
   const [content, setContent] = useState();
 
   useEffect(() => {
