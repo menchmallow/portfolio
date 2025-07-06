@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.nunito-sans {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
+.header {
+  background-color: gray;
+  color: white;
+  padding: 1rem;
+}
+
+.content {
+  width: 55vw;
+  margin: auto;
+  border: 2px solid gray;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 0.3rem rgb(226, 226, 226);
+  margin-top: 20vh;
+}
+
+.name {
+  font-size: 3.5rem;
+}
+
+.modal-container {
+  margin: 0;
+  position: absolute;
+  top: 22vh;
+  left: 32%;
+  width: 50vw;
+  z-index: 2;
+  box-shadow: none;
+  background-color: white;
+}
+
+.modal-content {
+  overflow: auto;
+  height: 40vh;
+}
+
+.about,
+.skills,
+.contact {
+  margin: 4rem;
+}
+
+.projects {
+  margin: 2rem;
+}
+
+.about-header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+.about-info {
+  font-size: 1.3rem;
+}
+
+.about-img {
+  max-width: 10vw;
+  border-radius: 100%;
+}
+
+.contact-info {
+  border: 2px dashed gray;
+  border-radius: 8px;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    width: 70vw;
+  }
+
+  .modal-container {
+    margin: 0;
+    position: absolute;
+    top: 22vh;
+    left: 18%;
+    width: 65vw;
+    z-index: 2;
+    box-shadow: none;
+    background-color: white;
+  }
+}
+
+@media (max-width: 992px) {
+  .content {
+    width: 100%;
+    border: 0;
+    margin-top: 0;
+    box-shadow: none;
+  }
+
+  .icons {
+    flex-wrap: nowrap;
+  }
+
+  .icon {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 0.5rem rgb(214, 214, 214);
+  }
+
+  .modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .modal-content {
+    height: 100%;
+  }
+
+  .about,
+  .skills,
+  .contact {
+    margin: 4rem;
+  }
+
+  .about-img {
+    max-width: 30vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    border: 0;
+    margin-top: 0;
+    box-shadow: none;
+  }
+
+  .icons {
+    flex-wrap: nowrap;
+  }
+
+  .icon {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 0.5rem rgb(214, 214, 214);
+  }
+
+  .modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .modal-content {
+    height: 100%;
+  }
+
+  .about,
+  .skills,
+  .contact {
+    margin: 4rem;
+  }
+
+  .about-img {
+    max-width: 30vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    width: 100%;
+    border: 0;
+    margin-top: 0;
+    box-shadow: none;
+  }
+
+  .icons {
+    flex-wrap: wrap;
+  }
+
+  .icon {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 0.5rem rgb(214, 214, 214);
+  }
+
+  .modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .modal-content {
+    height: 100%;
+  }
+
+  .about,
+  .skills,
+  .contact {
+    margin: 4rem;
+  }
+
+  .about-img {
+    max-width: 50vw;
+  }
+}
