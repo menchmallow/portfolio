@@ -3,7 +3,7 @@ const Skills = () => {
     <div className="skills montserrat">
       <div className="mb-4">
         <strong>languages</strong>
-        <div className="d-flex gap-2 mt-2">
+        <div className="d-flex flex-wrap gap-2 mt-2">
           <p
             className="card shadow-sm"
             style={{
@@ -42,13 +42,23 @@ const Skills = () => {
               textWrap: "nowrap",
             }}
           >
+            Typescript
+          </p>
+          <p
+            className="card shadow-sm"
+            style={{
+              width: "fit-content",
+              padding: "0.5rem",
+              textWrap: "nowrap",
+            }}
+          >
             Python
           </p>
         </div>
       </div>
       <div className="mb-4">
         <strong>frameworks</strong>
-        <div className="d-flex gap-2 mt-2">
+        <div className="d-flex flex-wrap gap-2 mt-2">
           <p
             className="card shadow-sm"
             style={{ width: "fit-content", padding: "0.5rem" }}
@@ -65,7 +75,7 @@ const Skills = () => {
       </div>
       <div className="mb-4">
         <strong>database</strong>
-        <div className="d-flex gap-2 mt-2">
+        <div className="d-flex flex-wrap gap-2 mt-2">
           <p
             className="card shadow-sm"
             style={{ width: "fit-content", padding: "0.5rem" }}
