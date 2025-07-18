@@ -1,30 +1,46 @@
 const Skills = () => {
   return (
-    <div className="skills">
+    <div className="skills montserrat">
       <div className="mb-4">
         <strong>languages</strong>
         <div className="d-flex gap-2 mt-2">
           <p
             className="card shadow-sm"
-            style={{ width: "fit-content", padding: "0.5rem" }}
+            style={{
+              width: "fit-content",
+              padding: "0.5rem",
+              textWrap: "nowrap",
+            }}
           >
             HTML
           </p>
           <p
             className="card shadow-sm"
-            style={{ width: "fit-content", padding: "0.5rem" }}
+            style={{
+              width: "fit-content",
+              padding: "0.5rem",
+              textWrap: "nowrap",
+            }}
           >
             CSS
           </p>
           <p
             className="card shadow-sm"
-            style={{ width: "fit-content", padding: "0.5rem" }}
+            style={{
+              width: "fit-content",
+              padding: "0.5rem",
+              textWrap: "nowrap",
+            }}
           >
             JavaScript
           </p>
           <p
             className="card shadow-sm"
-            style={{ width: "fit-content", padding: "0.5rem" }}
+            style={{
+              width: "fit-content",
+              padding: "0.5rem",
+              textWrap: "nowrap",
+            }}
           >
             Python
           </p>

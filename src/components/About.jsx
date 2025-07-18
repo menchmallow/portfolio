@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="about">
+    <div className="about montserrat">
       <div className="about-header d-flex flex-column flex-md-row justify-content-center align-items-center gap-5 mb-5">
         <img src="images/hihi.jpg" alt="ooga booga" className="about-img" />
         <div>
@@ -16,7 +16,7 @@ const About = () => {
           <p>hi! i'm isa, a fullstack dev and i..</p>
           <ul>
             <li>build fullstack apps using Python and Django on the backend</li>
-            <li>create sleek frontends with React</li>
+            <li>create frontends with React</li>
             <li>design responsive, user-friendly UI/UX</li>
           </ul>
         </div>

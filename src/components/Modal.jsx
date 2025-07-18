@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const Modal = ({ children, title, close }) => {
+const Modal = ({ children, title, close, height, width }) => {
   const [dragging, setDragging] = useState(false);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
 
@@ -40,7 +40,11 @@ const Modal = ({ children, title, close }) => {
   };
 
   return (
-    <div className="modal-container content" ref={modalRef}>
+    <div
+      className="modal-container content"
+      ref={modalRef}
+      style={{ width: width, height: height }}
+    >
       <div
         className="header d-flex justify-content-between"
         ref={headerRef}

@@ -37,7 +37,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="projects">
+    <div className="projects montserrat">
       <div className="shadow p-5 mb-5">
         <div className="d-flex align-items-center gap-3 mb-2">
           <h2>re:wear</h2>
