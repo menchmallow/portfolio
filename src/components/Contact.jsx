@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <div className="contact montserrat">
-      <div className="contact-info d-flex flex-column align-items-center p-5 mb-4">
+      <div className="contact-info d-flex flex-column align-items-center p-5 mb-4 text-center">
         <h1>{"(˶ˆᗜˆ˵)"}</h1>
         <h1>say hiiiiii</h1>
         <span>
