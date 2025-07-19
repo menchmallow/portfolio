@@ -79,7 +79,7 @@ const Canvas = () => {
     const canvasHeight = canvas.height / scale;
 
     for (let i = 0; i < 100; i++) {
-      const radius = 10 + Math.random() * 10;
+      const radius = 10 + Math.random() * 5;
       const x = Math.random() * (canvasWidth - radius * 2) + radius;
       const y = Math.random() * (canvasHeight - radius * 2) + radius;
       const dx = (Math.random() - 0.5) * 2;
