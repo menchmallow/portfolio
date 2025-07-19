@@ -79,11 +79,11 @@ const Canvas = () => {
     const canvasHeight = canvas.height / scale;
 
     for (let i = 0; i < 100; i++) {
-      const radius = 10 + Math.random() * 5;
+      const radius = 10 + Math.random() * 20;
       const x = Math.random() * (canvasWidth - radius * 2) + radius;
       const y = Math.random() * (canvasHeight - radius * 2) + radius;
-      const dx = (Math.random() - 0.5) * 2;
-      const dy = (Math.random() - 0.5) * 2;
+      const dx = (Math.random() - 0.5) * 4;
+      const dy = (Math.random() - 0.5) * 4;
       const color = colors[Math.floor(Math.random() * colors.length)];
       circlesRef.current.push(new Circle(x, y, dx, dy, radius, color));
     }
