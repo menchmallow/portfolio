@@ -2,7 +2,6 @@ const About = () => {
   return (
     <div className="about montserrat">
       <div className="about-header d-flex flex-column flex-md-row justify-content-center align-items-center gap-5 mb-5">
-        <img src="images/hihi.jpg" alt="ooga booga" className="about-img" />
         <div>
           <h1 style={{ color: "rgb(64, 131, 255)" }}>Isabel Managuelod</h1>
           <p>web developer</p>
@@ -18,17 +17,6 @@ const About = () => {
             <li>build fullstack apps using Python and Django on the backend</li>
             <li>create frontends with React</li>
             <li>design responsive, user-friendly UI/UX</li>
-          </ul>
-        </div>
-        <div className="mb-5">
-          <p>some tools i like using</p>
-          <ul>
-            <li>git + github for version control</li>
-            <li>postman for when APIs don't wanna behave</li>
-            <li>supabase for database</li>
-            <li>figma for quick wireframes</li>
-            <li>bootstrap to make stuff look decent</li>
-            <li>render for quick deployments</li>
           </ul>
         </div>
         <div className="mb-5">
