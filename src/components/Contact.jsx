@@ -13,7 +13,7 @@ const Contact = () => {
       </div>
       <div className="d-flex justify-content-center">
         <a
-          href="https://menchmallow.github.io/portfolio/resume.pdf"
+          href="/resume.pdf"
           download
           target="_blank"
           className="btn btn-primary"
