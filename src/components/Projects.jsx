@@ -36,9 +36,15 @@ const Projects = () => {
     "project-images/pokemon-quiz-2.PNG",
   ];
 
+  const todoistImages = [
+    "project-images/todoist-1.png",
+    "project-images/todoist-2.png",
+    "project-images/todoist-3.png",
+  ];
+
   return (
     <div className="projects montserrat">
-      <div className="shadow p-5 mb-5">
+      <div className="p-4 mb-5 border-bottom">
         <div className="d-flex align-items-center gap-3 mb-2">
           <h2>re:wear</h2>
           <a
@@ -112,7 +118,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className="shadow p-5 mb-5">
+      <div className="p-4 mb-5 border-bottom">
         <div className="d-flex align-items-center gap-3 mb-2">
           <h2>summarease</h2>
           <a
@@ -167,7 +173,83 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className="shadow p-5">
+      <div className="p-4 mb-5 border-bottom">
+        <div className="d-flex align-items-center gap-3 mb-2">
+          <h2>todoist</h2>
+          <a
+            href="https://todoist-ruby.vercel.app/"
+            target="_blank"
+            className="btn btn-outline-secondary"
+          >
+            view here!
+          </a>
+        </div>
+        <ImageCarousel images={todoistImages} />
+        <div className="mt-4">
+          <p>AI-Powered To Do List</p>
+          <p>
+            Built with React, integrated Clerk for user auth, and used
+            Appwrite's SDK for database management. Also allows users to
+            generate tasks with AI.
+          </p>
+          <p>key features:</p>
+          <ul>
+            <li>creating, organizing, and tracking tasks with due dates</li>
+            <li>
+              Implemented Gemini AI to allow users to generate tasks from a
+              prompt
+            </li>
+          </ul>
+          <div>
+            <p>stack:</p>
+            <div className="d-flex gap-2 mt-2 flex-wrap">
+              <p
+                className="card shadow-sm"
+                style={{ width: "fit-content", padding: "0.5rem" }}
+              >
+                React
+              </p>
+              <p
+                className="card shadow-sm"
+                style={{ width: "fit-content", padding: "0.5rem" }}
+              >
+                React Router
+              </p>
+              <p
+                className="card shadow-sm"
+                style={{ width: "fit-content", padding: "0.5rem" }}
+              >
+                Bootstrap
+              </p>
+              <p
+                className="card shadow-sm"
+                style={{ width: "fit-content", padding: "0.5rem" }}
+              >
+                Django
+              </p>
+              <p
+                className="card shadow-sm"
+                style={{ width: "fit-content", padding: "0.5rem" }}
+              >
+                Django REST framework
+              </p>
+              <p
+                className="card shadow-sm"
+                style={{ width: "fit-content", padding: "0.5rem" }}
+              >
+                Django simple-jwt
+              </p>
+              <p
+                className="card shadow-sm"
+                style={{ width: "fit-content", padding: "0.5rem" }}
+              >
+                PostgreSQL
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="p-4 mb-5 border-bottom">
         <div className="d-flex align-items-center gap-3 mb-2">
           <h2>pokemon quiz</h2>
           <a
