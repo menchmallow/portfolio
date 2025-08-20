@@ -78,7 +78,7 @@ function App() {
                 role="button"
                 onClick={() => {
                   setTitle("projects");
-                  setModalHeight("80vh");
+                  setModalHeight("70vh");
                   setModalWidth("60vw");
                 }}
               >

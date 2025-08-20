@@ -36,10 +36,10 @@ const Projects = () => {
     "project-images/pokemon-quiz-2.PNG",
   ];
 
-  const todoistImages = [
-    "project-images/todoist-1.png",
-    "project-images/todoist-2.png",
-    "project-images/todoist-3.png",
+  const tickImages = [
+    "project-images/tick-1.png",
+    "project-images/tick-2.png",
+    "project-images/tick-3.png",
   ];
 
   return (
@@ -175,7 +175,7 @@ const Projects = () => {
       </div>
       <div className="p-4 mb-5 border-bottom">
         <div className="d-flex align-items-center gap-3 mb-2">
-          <h2>todoist</h2>
+          <h2>tick</h2>
           <a
             href="https://todoist-ruby.vercel.app/"
             target="_blank"
@@ -184,7 +184,7 @@ const Projects = () => {
             view here!
           </a>
         </div>
-        <ImageCarousel images={todoistImages} />
+        <ImageCarousel images={tickImages} />
         <div className="mt-4">
           <p>AI-Powered To Do List</p>
           <p>
@@ -225,25 +225,13 @@ const Projects = () => {
                 className="card shadow-sm"
                 style={{ width: "fit-content", padding: "0.5rem" }}
               >
-                Django
+                Appwrite
               </p>
               <p
                 className="card shadow-sm"
                 style={{ width: "fit-content", padding: "0.5rem" }}
               >
-                Django REST framework
-              </p>
-              <p
-                className="card shadow-sm"
-                style={{ width: "fit-content", padding: "0.5rem" }}
-              >
-                Django simple-jwt
-              </p>
-              <p
-                className="card shadow-sm"
-                style={{ width: "fit-content", padding: "0.5rem" }}
-              >
-                PostgreSQL
+                Clerk
               </p>
             </div>
           </div>

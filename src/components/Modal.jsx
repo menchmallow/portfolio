@@ -43,7 +43,7 @@ const Modal = ({ children, title, close, height, width }) => {
     <div
       className="modal-container content"
       ref={modalRef}
-      style={{ width: width, height: height }}
+      style={{ width: width, maxHeight: height }}
     >
       <div
         className="header d-flex justify-content-between"
@@ -64,7 +64,12 @@ const Modal = ({ children, title, close, height, width }) => {
           <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
         </svg>
       </div>
-      <div className="modal-content">{children}</div>
+      <div
+        className="modal-content"
+        style={{ maxHeight: `calc(${height} - 100px)`, overflow: "auto" }}
+      >
+        {children}
+      </div>
     </div>
   );
 };
