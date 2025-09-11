@@ -34,7 +34,7 @@ function App() {
     <>
       <div className="montserrat">
         <div className="bg-white h-[100vh] md:h-fit md:w-[80vw] md:m-auto md:rounded-lg md:mt-45 md:border md:border-gray-500 md:border-2 lg:w-[70vw] xl:w-[50vw] overflow-hidden">
-          <div className="bg-black text-white py-3 p-2">Desktop</div>
+          <div className="bg-black text-white p-4">Desktop</div>
           <div className="h-full m-8 md:m-0">
             <div className="flex flex-col items-center mt-40 mb-10 md:mt-20">
               <p className="font-semibold text-5xl">
