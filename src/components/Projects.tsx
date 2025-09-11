@@ -1,6 +1,21 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+// PROJECT IMAGES
+import tick1 from "../assets/project-images/tick-1.png";
+import tick2 from "../assets/project-images/tick-2.png";
+import tick3 from "../assets/project-images/tick-3.png";
+import rewear1 from "../assets/project-images/rewear-1.png";
+import rewear2 from "../assets/project-images/rewear-2.png";
+import rewear3 from "../assets/project-images/rewear-3.png";
+import summarease1 from "../assets/project-images/summarease.png";
+import summarease2 from "../assets/project-images/summarease-2.png";
+import pokemonQuiz1 from "../assets/project-images/pokemon-quiz-1.png";
+import pokemonQuiz2 from "../assets/project-images/pokemon-quiz-2.png";
+import resumate1 from "../assets/project-images/resumate-1.png";
+import resumate2 from "../assets/project-images/resumate-2.png";
+import resumate3 from "../assets/project-images/resumate-3.png";
+
 type ProjectCardProps = {
   title: string;
   link: string;
@@ -81,29 +96,42 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 };
 
 const Projects = () => {
-  const rewearImages = [
-    "project-images/rewear-1.PNG",
-    "project-images/rewear-2.PNG",
-    "project-images/rewear-3.PNG",
-  ];
+  const rewearImages = [rewear1, rewear2, rewear3];
 
-  const summareaseImages = [
-    "project-images/summarease.PNG",
-    "project-images/summarease-2.PNG",
-  ];
+  const summareaseImages = [summarease1, summarease2];
 
-  const pokemonImages = [
-    "project-images/pokemon-quiz-1.PNG",
-    "project-images/pokemon-quiz-2.PNG",
-  ];
+  const pokemonImages = [pokemonQuiz1, pokemonQuiz2];
 
-  const tickImages = [
-    "project-images/tick-1.png",
-    "project-images/tick-2.png",
-    "project-images/tick-3.png",
-  ];
+  const tickImages = [tick1, tick2, tick3];
+
+  const resumateImages = [resumate1, resumate2, resumate3];
 
   const projects: ProjectCardProps[] = [
+    {
+      title: "resumate",
+      link: "https://resumate-beta.vercel.app/",
+      ImageComponent: <ImageCarousel images={resumateImages} />,
+      descriptions: [
+        "A website to help job-seekers create their resumes easily",
+        "A resume builder with templates to choose from",
+        "Includes an AI-powered interview simulator to help users prepare",
+        "Resumes are built utilizing the python-docx library",
+      ],
+      key_features: [
+        "fill out a simple form to generate a resume instantly",
+        "save resume to docx",
+        "AI powered interview simulator",
+      ],
+      stack: [
+        "React",
+        "React Router",
+        "Tailwindcss",
+        "python-docx",
+        "Django",
+        "Django REST framework",
+      ],
+    },
+
     {
       title: "Re:wear",
       link: "https://pokemon-quiz-a3i5.onrender.com/",
