@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, MutableRefObject } from "react";
 
 const colors = [
   "#ff91af",
@@ -13,8 +13,28 @@ const colors = [
   "#a6eec5",
 ];
 
+interface Mouse {
+  x: number;
+  y: number;
+}
+
 class Circle {
-  constructor(x, y, dx, dy, radius, color) {
+  x: number;
+  y: number;
+  dx: number;
+  dy: number;
+  radius: number;
+  baseRadius: number;
+  color: string;
+
+  constructor(
+    x: number,
+    y: number,
+    dx: number,
+    dy: number,
+    radius: number,
+    color: string
+  ) {
     this.x = x;
     this.y = y;
     this.dx = dx;
@@ -24,7 +44,7 @@ class Circle {
     this.color = color;
   }
 
-  draw(c) {
+  draw(c: CanvasRenderingContext2D) {
     c.beginPath();
     c.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
     c.fillStyle = this.color;
@@ -32,7 +52,7 @@ class Circle {
     c.closePath();
   }
 
-  update(canvas, c, mouse) {
+  update(canvas: HTMLCanvasElement, c: CanvasRenderingContext2D, mouse: Mouse) {
     if (this.x + this.radius > canvas.width || this.x - this.radius < 0)
       this.dx *= -1;
     if (this.y + this.radius > canvas.height || this.y - this.radius < 0)
@@ -54,13 +74,15 @@ class Circle {
 }
 
 const Canvas = () => {
-  const canvasRef = useRef();
-  const circlesRef = useRef([]);
-  const mouseRef = useRef({ x: 0, y: 0 });
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const circlesRef = useRef<Circle[]>([]);
+  const mouseRef = useRef<Mouse>({ x: 0, y: 0 });
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
     const c = canvas.getContext("2d");
+    if (!c) return;
 
     const scale = window.devicePixelRatio || 1;
 
@@ -98,7 +120,7 @@ const Canvas = () => {
 
     animate();
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
       mouseRef.current.x = e.clientX - rect.left;
       mouseRef.current.y = e.clientY - rect.top;
@@ -117,7 +139,7 @@ const Canvas = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} />;
+  return <canvas ref={canvasRef} className="fixed top-0 left-0 z-[-1]" />;
 };
 
 export default Canvas;

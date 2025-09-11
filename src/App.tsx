@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
-import "./App.css";
+import { ReactNode, useEffect, useState } from "react";
+import "./index.css";
+
+// COMPONENTS
 import Modal from "./components/Modal";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -8,10 +10,8 @@ import Contact from "./components/Contact";
 import Canvas from "./components/Canvas";
 
 function App() {
-  const [title, setTitle] = useState();
-  const [content, setContent] = useState();
-  const [modalWidth, setModalWidth] = useState();
-  const [modalHeight, setModalHeight] = useState();
+  const [title, setTitle] = useState<string | null>(null);
+  const [Content, setContent] = useState<ReactNode | null>(null);
 
   useEffect(() => {
     if (title === "about") {
@@ -26,33 +26,28 @@ function App() {
   }, [title]);
 
   const handleClear = () => {
-    setTitle("");
-    setContent("");
-    setModalHeight("");
-    setModalWidth("");
+    setTitle(null);
+    setContent(null);
   };
 
   return (
     <>
-      <div className="main">
-        <div className="content">
-          <div className="header">Desktop</div>
-          <div className="info">
-            <div className="text-center m-5">
-              <h1 className="name">
-                hi!{" "}
-                <span style={{ color: "rgb(64, 131, 255)" }}>i'm Isabel</span>
-              </h1>
-              <p className="fs-4">full stack web developer</p>
+      <div className="montserrat">
+        <div className="bg-white h-[100vh] md:h-fit md:w-[80vw] md:m-auto md:rounded-lg md:mt-45 md:border md:border-gray-500 md:border-2 lg:w-[70vw] xl:w-[50vw] overflow-hidden">
+          <div className="bg-black text-white py-3 p-2">Desktop</div>
+          <div className="h-full m-8 md:m-0">
+            <div className="flex flex-col items-center mt-40 mb-10 md:mt-20">
+              <p className="font-semibold text-5xl">
+                hi! <span className="text-blue-500">i'm Isabel</span>
+              </p>
+              <p className="text-lg">full stack web developer</p>
             </div>
-            <div className="icons d-flex justify-content-center align-items-center gap-5 m-5">
+            <div className="grid grid-cols-2 mx-15 gap-4 md:flex md:justify-center md:mb-20">
               <div
-                className="icon d-flex flex-column align-items-center"
+                className="flex flex-col items-center bg-blue-100 rounded-2xl p-2 md:bg-transparent cursor-pointer"
                 role="button"
                 onClick={() => {
                   setTitle("about");
-                  setModalHeight("60vh");
-                  setModalWidth("40vw");
                 }}
               >
                 <i
@@ -62,24 +57,20 @@ function App() {
                 about
               </div>
               <div
-                className="icon d-flex flex-column align-items-center"
+                className="flex flex-col items-center bg-blue-100 rounded-2xl p-2 md:bg-transparent cursor-pointer"
                 role="button"
                 onClick={() => {
                   setTitle("skills");
-                  setModalHeight("50vh");
-                  setModalWidth("40vw");
                 }}
               >
                 <i className="fi fi-ts-bulb" style={{ fontSize: "4rem" }}></i>
                 skills
               </div>
               <div
-                className="icon d-flex flex-column align-items-center"
+                className="flex flex-col items-center bg-blue-100 rounded-2xl p-2 md:bg-transparent cursor-pointer"
                 role="button"
                 onClick={() => {
                   setTitle("projects");
-                  setModalHeight("70vh");
-                  setModalWidth("60vw");
                 }}
               >
                 <i
@@ -89,7 +80,7 @@ function App() {
                 projects
               </div>
               <div
-                className="icon d-flex flex-column align-items-center"
+                className="flex flex-col items-center bg-blue-100 rounded-2xl p-2 md:bg-transparent cursor-pointer"
                 role="button"
                 onClick={() => setTitle("contact")}
               >
@@ -102,15 +93,13 @@ function App() {
             </div>
           </div>
         </div>
-        {content && (
+        {Content && (
           <Modal
+            key={title}
             title={title}
             close={handleClear}
-            width={modalWidth}
-            height={modalHeight}
-          >
-            {content}
-          </Modal>
+            content={Content}
+          ></Modal>
         )}
       </div>
       <Canvas />
