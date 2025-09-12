@@ -32,17 +32,17 @@ function App() {
 
   return (
     <>
-      <div className="montserrat">
-        <div className="bg-white h-[100vh] md:h-fit md:w-[80vw] md:m-auto md:rounded-lg md:mt-45 md:border md:border-gray-500 md:border-2 lg:w-[70vw] xl:w-[50vw] overflow-hidden">
+      <div className="montserrat flex items-center justify-center h-[100vh]">
+        <div className="bg-white h-[100vh] w-full md:h-fit md:w-[80vw] md:rounded-lg md:border md:border-gray-500 md:border-2 lg:w-[70vw] xl:w-[40vw] overflow-hidden">
           <div className="bg-black text-white p-4">Desktop</div>
-          <div className="h-full m-8 md:m-0">
+          <div className="h-full">
             <div className="flex flex-col items-center mt-40 mb-10 md:mt-20">
               <p className="font-semibold text-5xl">
                 hi! <span className="text-blue-500">i'm Isabel</span>
               </p>
               <p className="text-lg">full stack web developer</p>
             </div>
-            <div className="grid grid-cols-2 mx-15 gap-4 md:flex md:justify-center md:mb-20">
+            <div className="grid grid-cols-2 m-8 gap-4 md:m-0 md:flex md:justify-center md:mb-20">
               <div
                 className="flex flex-col items-center bg-blue-100 rounded-2xl p-2 md:bg-transparent cursor-pointer"
                 role="button"
