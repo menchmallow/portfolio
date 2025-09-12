@@ -74,8 +74,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {key_features.map((feature, i) => (
             <li key={i}>{feature}</li>
           ))}
-          <li>AI powered summary generator</li>
-          <li>export to pdf support</li>
         </ul>
         <div>
           <p className="my-4">stack:</p>
@@ -134,7 +132,7 @@ const Projects = () => {
 
     {
       title: "Re:wear",
-      link: "https://pokemon-quiz-a3i5.onrender.com/",
+      link: "https://rewear-x2gd.onrender.com/",
       ImageComponent: <ImageCarousel images={rewearImages} />,
       descriptions: [
         "A buy and sell marketplace",
@@ -157,7 +155,7 @@ const Projects = () => {
     },
     {
       title: "tick-ai",
-      link: "https://todoist-ruby.vercel.app/",
+      link: "https://tick-ai.vercel.app/",
       ImageComponent: <ImageCarousel images={tickImages} />,
       descriptions: [
         "AI-Powered To Do List",
