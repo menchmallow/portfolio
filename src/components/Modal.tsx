@@ -85,7 +85,7 @@ const Modal = ({ content, title, close }: ModalProps) => {
 
   return (
     <div
-      className="bg-white absolute w-full h-full md:w-[80vw] md:h-[60vh] md:rounded-lg md:border md:border-gray-500 md:border-2 lg:w-[70vw] xl:w-[50vw] overflow-hidden"
+      className="bg-white absolute w-full h-full md:w-[80vw] md:h-[60vh] md:rounded-lg md:border md:border-gray-500 md:border-2 lg:w-[70vw] xl:w-[40vw] overflow-hidden"
       ref={modalRef}
     >
       <div
@@ -102,7 +102,7 @@ const Modal = ({ content, title, close }: ModalProps) => {
           className="cursor-pointer"
         />
       </div>
-      <div className="h-full overflow-auto p-8">{content}</div>
+      <div className="h-full overflow-auto p-4 md:p-8">{content}</div>
     </div>
   );
 };
