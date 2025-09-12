@@ -74,8 +74,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {key_features.map((feature, i) => (
             <li key={i}>{feature}</li>
           ))}
-          <li>AI powered summary generator</li>
-          <li>export to pdf support</li>
         </ul>
         <div>
           <p className="my-4">stack:</p>
