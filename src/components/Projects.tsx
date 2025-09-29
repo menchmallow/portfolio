@@ -5,6 +5,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import tick1 from "../assets/project-images/tick-1.png";
 import tick2 from "../assets/project-images/tick-2.png";
 import tick3 from "../assets/project-images/tick-3.png";
+import tick4 from "../assets/project-images/tick-4.png";
+import tick5 from "../assets/project-images/tick-5.png";
 import rewear1 from "../assets/project-images/rewear-1.png";
 import rewear2 from "../assets/project-images/rewear-2.png";
 import rewear3 from "../assets/project-images/rewear-3.png";
@@ -15,15 +17,20 @@ import pokemonQuiz2 from "../assets/project-images/pokemon-quiz-2.png";
 import resumate1 from "../assets/project-images/resumate-1.png";
 import resumate2 from "../assets/project-images/resumate-2.png";
 import resumate3 from "../assets/project-images/resumate-3.png";
+import silksong1 from "../assets/project-images/silksong-1.png";
+import silksong2 from "../assets/project-images/silksong-2.png";
+import silksong3 from "../assets/project-images/silksong-3.png";
+import silksong4 from "../assets/project-images/silksong-4.png";
 
 type ProjectCardProps = {
   title: string;
   link: string;
   ImageComponent: React.ReactElement;
   descriptions: string[];
-  key_features: string[];
+  key_features?: string[];
   stack: string[];
 };
+
 const ImageCarousel = ({ images }: { images: string[] }) => {
   return (
     <Carousel
@@ -69,12 +76,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             {description}
           </p>
         ))}
-        <p className="my-2">key features:</p>
-        <ul className="list-disc mx-10">
-          {key_features.map((feature, i) => (
-            <li key={i}>{feature}</li>
-          ))}
-        </ul>
+        {key_features && (
+          <>
+            <p className="my-2">key features:</p>
+            <ul className="list-disc mx-10">
+              {key_features.map((feature, i) => (
+                <li key={i}>{feature}</li>
+              ))}
+            </ul>
+          </>
+        )}
         <div>
           <p className="my-4">stack:</p>
           <div className="flex items-center flex-wrap gap-2">
@@ -100,9 +111,11 @@ const Projects = () => {
 
   const pokemonImages = [pokemonQuiz1, pokemonQuiz2];
 
-  const tickImages = [tick1, tick2, tick3];
+  const tickImages = [tick1, tick2, tick3, tick4, tick5];
 
   const resumateImages = [resumate1, resumate2, resumate3];
+
+  const silksongImages = [silksong1, silksong2, silksong3, silksong4];
 
   const projects: ProjectCardProps[] = [
     {
@@ -129,7 +142,6 @@ const Projects = () => {
         "Django REST framework",
       ],
     },
-
     {
       title: "Re:wear",
       link: "https://rewear-x2gd.onrender.com/",
@@ -154,7 +166,7 @@ const Projects = () => {
       ],
     },
     {
-      title: "tick-ai",
+      title: "tick",
       link: "https://tick-ai.vercel.app/",
       ImageComponent: <ImageCarousel images={tickImages} />,
       descriptions: [
@@ -167,6 +179,13 @@ const Projects = () => {
         "item listings with image upload (Supabase storage)",
       ],
       stack: ["React", "React Router", "Bootstrap", "Appwrite", "Clerk"],
+    },
+    {
+      title: "Hollow Knight: Silksong - landing page",
+      link: "https://hollowknightsilksong-fan.vercel.app/",
+      ImageComponent: <ImageCarousel images={silksongImages} />,
+      descriptions: [""],
+      stack: ["React", "Tailwindcss"],
     },
     {
       title: "summarease",
