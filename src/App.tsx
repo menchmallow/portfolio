@@ -40,7 +40,6 @@ function App() {
               <p className="font-semibold text-5xl">
                 hi! <span className="text-blue-500">i'm Isabel</span>
               </p>
-              <p className="text-lg">full stack web developer</p>
             </div>
             <div className="grid grid-cols-2 m-8 gap-4 md:m-0 md:flex md:justify-center md:mb-20">
               <div

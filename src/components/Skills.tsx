@@ -2,6 +2,23 @@ const Skills = () => {
   return (
     <div>
       <div className="mb-10">
+        <strong>Content & Designing</strong>
+        <div className="flex flex-wrap items-center gap-2">
+          <p className="border border-gray-300 shadow-sm p-2 rounded-lg m-0">
+            Graphic Design
+          </p>
+          <p className="border border-gray-300 shadow-sm p-2 rounded-lg m-0">
+            Video Editing
+          </p>
+          <p className="border border-gray-300 shadow-sm p-2 rounded-lg m-0">
+            Capcut
+          </p>
+          <p className="border border-gray-300 shadow-sm p-2 rounded-lg m-0">
+            Canva
+          </p>
+        </div>
+      </div>
+      <div className="mb-10">
         <strong>languages</strong>
         <div className="flex flex-wrap items-center gap-2">
           <p className="border border-gray-300 shadow-sm p-2 rounded-lg m-0">
@@ -23,12 +40,6 @@ const Skills = () => {
           </p>
           <p className="border border-gray-300 shadow-sm p-2 rounded-lg m-0">
             Django
-          </p>
-          <p className="border border-gray-300 shadow-sm p-2 rounded-lg m-0">
-            Electron.js
-          </p>
-          <p className="border border-gray-300 shadow-sm p-2 rounded-lg m-0">
-            Bootstrap
           </p>
           <p className="border border-gray-300 shadow-sm p-2 rounded-lg m-0">
             Tailwind

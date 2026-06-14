@@ -21,6 +21,11 @@ import silksong1 from "../assets/project-images/silksong-1.png";
 import silksong2 from "../assets/project-images/silksong-2.png";
 import silksong3 from "../assets/project-images/silksong-3.png";
 import silksong4 from "../assets/project-images/silksong-4.png";
+import nailGraphicDesign1 from "../assets/graphic-design-images/nail 1.png";
+import nailGraphicDesign2 from "../assets/graphic-design-images/nail 2.png";
+import twixGraphicDesign from "../assets/graphic-design-images/twix.png";
+import ediblesLogoDesign from "../assets/graphic-design-images/edibles logo.png";
+import cLogoDesign from "../assets/graphic-design-images/C.png";
 
 type ProjectCardProps = {
   title: string;
@@ -215,6 +220,34 @@ const Projects = () => {
 
   return (
     <div>
+      <div className="mb-10">
+        <h2 className="font-semibold text-3xl my-4">Graphic Designs</h2>
+        <div className="bg-gray-100 p-4 rounded">
+          <div className="grid gap-y-6 md:grid-cols-2 md:gap-4">
+            <div>
+              <img src={nailGraphicDesign2} alt="Nail Graphic Design 1" />
+            </div>
+            <div>
+              <img src={nailGraphicDesign1} alt="Nail Graphic Design 2" />
+            </div>
+            <div>
+              <img src={twixGraphicDesign} alt="Twix Graphic Design" />
+            </div>
+          </div>
+          <h2 className="my-4 font-semibold text-xl">Logos</h2>
+          <div className="grid gap-y-6 md:grid-cols-2 md:gap-4">
+            <div>
+              <img
+                src={ediblesLogoDesign}
+                alt="edibles Logo Graphic Design 2"
+              />
+            </div>
+            <div>
+              <img src={cLogoDesign} alt="C Logo Graphic Design" />
+            </div>
+          </div>
+        </div>
+      </div>
       {projects.map((project, i) => (
         <ProjectCard
           key={i}
