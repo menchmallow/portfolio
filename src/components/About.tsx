@@ -6,7 +6,6 @@ const About = () => {
           <h1 className="font-semibold text-3xl my-2 text-blue-500">
             Isabel Managuelod
           </h1>
-          <p>web developer</p>
         </div>
       </div>
       <div>
@@ -14,15 +13,16 @@ const About = () => {
           <p className="text-xl font-medium my-4">
             <span className="font-semibold text-blue-500">|</span> About me
           </p>
-          <p className="my-4">hi! i'm isa, a fullstack dev and i..</p>
+          <p className="my-4">hi! i'm isa, and i..</p>
           <ul className="list-disc mx-10">
-            <li>create website wireframes</li>
-            <li>design responsive, user-friendly UI/UX</li>
-            <li>build fullstack apps mainly using Django + React</li>
-            <li>love turning ideas into real apps!!!</li>
+            <li>edit long form videos into engaging, fast-paced clips</li>
             <li>
-              lately been exploring into the world of AI and integrating AI into
-              my projects :D
+              infuse internet culture and modern humor into creative video edits
+            </li>
+            <li>like designing graphics :D</li>
+            <li>build fullstack apps mainly using Django + React</li>
+            <li>
+              love combining graphic artistry with clean code to build apps!!!
             </li>
           </ul>
         </div>
@@ -76,7 +76,7 @@ const About = () => {
             about me
           </p>
           <ul className="list-disc mx-10">
-            <li>i like playing games, especially fps (im bad at gaming btw)</li>
+            <li>i like playing games, especially fps (i dont have aim btw)</li>
             <li>
               i like listening to music,{" "}
               <a
