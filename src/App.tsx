@@ -8,10 +8,19 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Canvas from "./components/Canvas";
+import ImageModal from "./components/ImageModal";
+
+import TypingEffect from "./components/ui/TypingEffect";
+
+import hiring from "./assets/graphic-design-images/hiring.webp";
+const phrases = ["web developer", "graphic designer", "video editor"];
 
 function App() {
-  const [title, setTitle] = useState<string | null>(null);
-  const [Content, setContent] = useState<ReactNode | null>(null);
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState<ReactNode | null>(null);
+
+  // image modal states
+  const [imageSrc, setImageSrc] = useState("");
 
   useEffect(() => {
     if (title === "about") {
@@ -19,15 +28,19 @@ function App() {
     } else if (title === "skills") {
       setContent(<Skills />);
     } else if (title === "projects") {
-      setContent(<Projects />);
+      setContent(<Projects setImgSrc={setImageSrc} />);
     } else if (title === "contact") {
       setContent(<Contact />);
     }
   }, [title]);
 
   const handleClear = () => {
-    setTitle(null);
+    setTitle("");
     setContent(null);
+  };
+
+  const handleClearImage = () => {
+    setImageSrc("");
   };
 
   return (
@@ -40,6 +53,7 @@ function App() {
               <p className="font-semibold text-5xl">
                 hi! <span className="text-blue-500">i'm Isabel</span>
               </p>
+              <TypingEffect words={phrases} />
             </div>
             <div className="grid grid-cols-2 m-8 gap-4 md:m-0 md:flex md:justify-center md:mb-20">
               <div
@@ -92,14 +106,15 @@ function App() {
             </div>
           </div>
         </div>
-        {Content && (
+        {content && (
           <Modal
             key={title}
             title={title}
             close={handleClear}
-            content={Content}
+            content={content}
           ></Modal>
         )}
+        {imageSrc && <ImageModal img={imageSrc} onClose={handleClearImage} />}
       </div>
       <Canvas />
     </>
