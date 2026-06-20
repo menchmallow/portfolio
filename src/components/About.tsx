@@ -15,12 +15,14 @@ const About = () => {
           </p>
           <p className="my-4">hi! i'm isa, and i..</p>
           <ul className="list-disc mx-10">
+            <li>build fullstack websites mainly using Django + React</li>
+            <li>design user interfaces for websites</li>
+            <li>like designing graphics :D</li>
+            <li>focus mostly on colors and typography in designing</li>
             <li>edit long form videos into engaging, fast-paced clips</li>
             <li>
               infuse internet culture and modern humor into creative video edits
             </li>
-            <li>like designing graphics :D</li>
-            <li>build fullstack apps mainly using Django + React</li>
             <li>
               love combining graphic artistry with clean code to build apps!!!
             </li>
