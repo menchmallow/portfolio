@@ -32,7 +32,7 @@ const iskolarImages = [
 const websiteProjects: ProjectCardProps[] = [
   {
     title: "Iskolar",
-    link: "https://iskolar-brown.vercel.app/",
+    link: "https://iskolar-ph.vercel.app/",
     ImageComponent: <ImageCarousel images={iskolarImages} />,
     descriptions: [
       "A website for browsing scholarships in the Phillippines",

@@ -1,6 +1,6 @@
-import Canvas from "./components/canvas";
-import Nav from "./components/nav";
-import TypingEffect from "./components/typing-effect";
+import Canvas from "../components/canvas";
+import Nav from "../components/nav";
+import TypingEffect from "../components/typing-effect";
 
 const phrases = ["web developer", "graphic designer", "video editor"];
 
